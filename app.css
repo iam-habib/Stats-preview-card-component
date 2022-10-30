@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz@1,9..144&family=Lato&family=Montserrat&family=Open+Sans:wght@400;800&family=Oswald&family=Poppins:wght@400;600&family=Roboto&display=swap");
+
+:root {
+  --Verydarkblue: hsl(233, 47%, 7%); /*(main background)*/
+  --Darkdesaturatedblue: hsl(244, 38%, 16%); /*(card background)*/
+  --Softviolet: hsl(277, 64%, 61%); /*(accent)*/
+  --White: hsl(0, 0%, 100%); /* (main heading, stats) */
+  --Slightlytransparentwhite: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
+  --Slightlytransparentwhite: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--Verydarkblue);
+}
+
+.container {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .stats_card {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  border-radius: 1em;
+}
+
+.stats_card .right_card {
+  width: 50%;
+  height: 600px;
+  background-image: linear-gradient(
+      rgba(102, 15, 156, 0.637),
+      rgb(105, 27, 153, 0.5)
+    ),
+    url("images/image-header-desktop.jpg");
+  background-size: cover;
+  border-bottom-right-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.stats_card .left_card {
+  width: 50%;
+  height: 600px;
+  background-color: var(--Darkdesaturatedblue);
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  padding: 6em;
+}
+
+.left_card h1 {
+  font-family: "poppins";
+  color: white;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+.left_card h1 span {
+  color: var(--Softviolet);
+}
+
+.left_card p {
+  color: var(--Slightlytransparentwhite);
+  font-family: "poppins";
+  margin: 1em auto;
+  font-size: 1.3rem;
+}
+
+.left_card .stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5em 0em 0 0;
+}
+
+.stats .box h2 {
+  font-family: "poppins";
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.stats .box p {
+  font-family: "poppins";
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1660px) and (max-width: 1900px) {
+  .left_card h1 {
+    font-family: "poppins";
+    color: white;
+    font-weight: 600;
+    font-size: 2.7rem;
+  }
+
+  .left_card p {
+    color: var(--Slightlytransparentwhite);
+    font-family: "poppins";
+    margin: 1em auto;
+    font-size: 1.19rem;
+    padding: 0 1em 0 0;
+  }
+
+  .left_card .stats {
+    margin: 5em 0em 0 0;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1660px) {
+  .stats_card .right_card {
+    height: 500px;
+  }
+
+  .stats_card .left_card {
+    padding: 5em 5em 5em 5em;
+    height: 500px;
+  }
+
+  .left_card h1 {
+    font-family: "poppins";
+    color: white;
+    font-weight: 600;
+    font-size: 2.2rem;
+  }
+
+  .left_card p {
+    color: var(--Slightlytransparentwhite);
+    font-family: "poppins";
+    margin: 1em auto;
+    font-size: 1.05rem;
+    padding: 0 1em 0 0;
+  }
+
+  .left_card .stats {
+    margin: 4em 0em 0 0;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .stats_card .right_card {
+    height: 400px;
+  }
+
+  .stats_card .left_card {
+    padding: 3em;
+    height: 400px;
+  }
+
+  .left_card h1 {
+    font-family: "poppins";
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  .left_card p {
+    color: var(--Slightlytransparentwhite);
+    font-family: "poppins";
+    margin: 1em auto;
+    font-size: 1rem;
+    padding: 0 1em 0 0;
+  }
+
+  .left_card .stats {
+    margin: 3em 0em 0 0;
+  }
+
+  .stats .box h2 {
+    font-family: "poppins";
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .stats .box p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .container .stats_card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    border-radius: 1em;
+  }
+  .stats_card .right_card {
+    height: 400px;
+  }
+
+  .stats_card .left_card {
+    padding: 3em;
+    height: 400px;
+  }
+
+  .left_card h1 {
+    font-family: "poppins";
+    color: white;
+    font-weight: 600;
+    font-size: 1.75rem;
+  }
+
+  .left_card p {
+    color: var(--Slightlytransparentwhite);
+    font-family: "poppins";
+    margin: 1em auto;
+    font-size: 0.9rem;
+    padding: 0 1em 0 0;
+  }
+
+  .left_card .stats {
+    margin: 4em 0em 0 0;
+  }
+
+  .stats .box h2 {
+    font-family: "poppins";
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .stats .box p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 780px) and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .container .stats_card {
+    width: 60%;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .stats_card .right_card {
+    width: 100%;
+    height: 30vh;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0em;
+  }
+
+  .stats_card .left_card {
+    width: 100%;
+    padding: 2em;
+    height: 60vh;
+    border-top-left-radius: 0em;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+
+  .left_card h1 {
+    font-family: "poppins";
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  .left_card p {
+    color: var(--Slightlytransparentwhite);
+    font-family: "poppins";
+    margin: 1em auto;
+    font-size: 0.95rem;
+    padding: 0 1em 0 0;
+  }
+
+  .left_card .stats {
+    flex-direction: column;
+    margin: 0em 0em;
+  }
+
+  .stats .box {
+    margin: 1em 0;
+  }
+
+  .stats .box h2 {
+    font-size: 1.3rem;
+  }
+
+  .stats .box p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 440px) and (max-width: 780px) {
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .container .stats_card {
+    width: 60%;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .stats_card .right_card {
+    width: 100%;
+    height: 30vh;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0em;
+  }
+
+  .stats_card .left_card {
+    width: 100%;
+    padding: 2em;
+    height: 60vh;
+    border-top-left-radius: 0em;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+
+  .left_card h1 {
+    font-family: "poppins";
+    font-size: 1.5rem;
+  }
+
+  .left_card p {
+    color: var(--Slightlytransparentwhite);
+    margin: 1em auto;
+    font-size: 0.8rem;
+    padding: 0 1em 0 0;
+  }
+
+  .left_card .stats {
+    flex-direction: column;
+    margin: 2em 0em;
+  }
+
+  .stats .box {
+    margin: 1.3em 0;
+  }
+
+  .stats .box h2 {
+    font-size: 1.1rem;
+  }
+
+  .stats .box p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 370px) and (max-width: 440px) {
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .container .stats_card {
+    width: 60%;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .stats_card .right_card {
+    width: 100%;
+    height: 30vh;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0em;
+  }
+
+  .stats_card .left_card {
+    width: 100%;
+    padding: 2em;
+    height: 50vh;
+    border-top-left-radius: 0em;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+
+  .left_card h1 {
+    font-family: "poppins";
+    font-size: 1.3rem;
+  }
+
+  .left_card p {
+    color: var(--Slightlytransparentwhite);
+    margin: 1em auto;
+    font-size: 0.7rem;
+    padding: 0 1em 0 0;
+  }
+
+  .left_card .stats {
+    flex-direction: column;
+    margin: 0em 0em;
+  }
+
+  .stats .box {
+    margin: 0.8em 0;
+  }
+
+  .stats .box h2 {
+    font-size: 1rem;
+  }
+
+  .stats .box p {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .container .stats_card {
+    width: 60%;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .stats_card .right_card {
+    width: 100%;
+    height: 30vh;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0em;
+  }
+
+  .stats_card .left_card {
+    width: 100%;
+    padding: 2em 1em;
+    height: 50vh;
+    border-top-left-radius: 0em;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+
+  .left_card h1 {
+    font-family: "poppins";
+    font-size: 1rem;
+  }
+
+  .left_card p {
+    color: var(--Slightlytransparentwhite);
+    margin: 1em auto;
+    font-size: 0.65rem;
+    padding: 0 1em 0 0;
+  }
+
+  .left_card .stats {
+    flex-direction: column;
+    margin: 1.5em 0em;
+  }
+
+  .stats .box {
+    margin: 01em 0;
+  }
+
+  .stats .box h2 {
+    font-size: 1rem;
+  }
+
+  .stats .box p {
+    font-size: 0.5rem;
+  }
+}
